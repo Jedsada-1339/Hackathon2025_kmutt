@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://bu1b5nv8dwveg"]
+
+[ext_resource type="Texture2D" uid="uid://qb7hpjx61av5" path="res://Oak/assets/bg_chat_box_small.png" id="1_c2jhy"]
+[ext_resource type="Texture2D" uid="uid://dgrs8fkq1m8wk" path="res://Oak/assets/BG_chat.png" id="2_ugs1e"]
+[ext_resource type="FontFile" uid="uid://b7if6iny5c6gk" path="res://Dove/fronts/NotoSansThai-VariableFont_wdth,wght.ttf" id="3_aactg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_imaff"]
+
+[node name="case_list" type="TextureRect"]
+texture = ExtResource("1_c2jhy")
+expand_mode = 1
+
+[node name="box" type="NinePatchRect" parent="."]
+layout_mode = 2
+offset_left = 3.0
+offset_top = 8.0
+offset_right = 900.0
+offset_bottom = 236.0
+scale = Vector2(0.452781, 0.422484)
+texture = ExtResource("2_ugs1e")
+region_rect = Rect2(0, 0, 884, 206)
+patch_margin_left = 224
+patch_margin_top = 8
+patch_margin_right = 4
+patch_margin_bottom = 6
+
+[node name="name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 24.0
+offset_right = 204.0
+offset_bottom = 71.0
+scale = Vector2(0.162922, 0.162922)
+theme_override_fonts/font = ExtResource("3_aactg")
+theme_override_font_sizes/font_size = 191
+text = "ชื่อ"
+
+[node name="detail" type="Label" parent="."]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 64.0
+offset_right = 204.0
+offset_bottom = 93.0
+scale = Vector2(0.133867, 0.133867)
+theme_override_fonts/font = ExtResource("3_aactg")
+theme_override_font_sizes/font_size = 121
+text = "ความสัมพันธ์ :"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 9.0
+offset_right = 408.0
+offset_bottom = 103.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_imaff")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_imaff")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_imaff")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_imaff")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_imaff")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_imaff")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_imaff")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_imaff")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_imaff")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_imaff")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_imaff")
