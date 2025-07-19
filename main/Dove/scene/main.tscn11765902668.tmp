@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cnto14lf8j17c"]
+[gd_scene load_steps=9 format=3 uid="uid://cnto14lf8j17c"]
 
 [ext_resource type="Texture2D" uid="uid://btv0csr3mk1en" path="res://Dove/img/Desktop.png" id="1_itxqv"]
 [ext_resource type="Texture2D" uid="uid://cgq7hogl35p7w" path="res://Dove/img/Arrow.png" id="2_v0l8b"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://ry6g4k6va5ip" path="res://Dove/scene/npc_chat_template.tscn" id="6_0166d"]
 [ext_resource type="Texture2D" uid="uid://dni7fjeyracg3" path="res://Dove/img/bot_chat.png" id="7_b5f6u"]
 [ext_resource type="PackedScene" uid="uid://bfvrlxx6ytvrc" path="res://Dove/scene/user_chat_template.tscn" id="7_s44yf"]
-[ext_resource type="PackedScene" uid="uid://cv5t2yalujcls" path="res://Dove/scene/choice_button_template.tscn" id="9_so6n5"]
 
 [node name="Main" type="Node2D"]
 
@@ -39,6 +38,7 @@ texture = ExtResource("3_wp4xf")
 metadata/_edit_lock_ = true
 
 [node name="chatlist" type="ScrollContainer" parent="Chat_Screen/Chat"]
+visible = false
 offset_left = -442.0
 offset_top = -558.0
 offset_right = 440.0
@@ -56,9 +56,10 @@ layout_mode = 2
 
 [node name="chat_detail" type="ScrollContainer" parent="Chat_Screen/Chat"]
 offset_left = -438.0
-offset_top = -551.0
+offset_top = -435.0
 offset_right = 440.0
 offset_bottom = 349.0
+metadata/_edit_lock_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Chat_Screen/Chat/chat_detail"]
 layout_mode = 2
@@ -72,7 +73,7 @@ layout_mode = 2
 visible = false
 layout_mode = 2
 
-[node name="Answer" type="NinePatchRect" parent="Chat_Screen/Chat"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Chat_Screen/Chat"]
 offset_left = -438.0
 offset_top = 345.0
 offset_right = 440.0
@@ -84,22 +85,9 @@ patch_margin_right = 10
 patch_margin_bottom = 9
 metadata/_edit_lock_ = true
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Chat_Screen/Chat/Answer"]
+[node name="Answer" type="VBoxContainer" parent="Chat_Screen/Chat/NinePatchRect"]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 15.0
-offset_right = 864.0
-offset_bottom = 310.0
-
-[node name="Choice_VBoxContainer" type="VBoxContainer" parent="Chat_Screen/Chat/Answer/ScrollContainer"]
-layout_mode = 2
-
-[node name="ChoiceButton" parent="Chat_Screen/Chat/Answer/ScrollContainer/Choice_VBoxContainer" instance=ExtResource("9_so6n5")]
-visible = false
-layout_mode = 2
-
-[node name="TextureButton" type="TextureButton" parent="Chat_Screen/Chat"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 873.0
+offset_bottom = 307.0
 
 [node name="ChatAnimation" type="AnimationPlayer" parent="Chat_Screen"]

@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfvrlxx6ytvrc"]
+
+[ext_resource type="Texture2D" uid="uid://bvrfai0qedhp2" path="res://Dove/img/bg_chat_box_small.png" id="1_sd1vc"]
+[ext_resource type="Texture2D" uid="uid://b5fj2tacicb6y" path="res://Dove/img/user_chat.png" id="2_byyyn"]
+[ext_resource type="FontFile" uid="uid://b7if6iny5c6gk" path="res://Dove/fronts/NotoSansThai-VariableFont_wdth,wght.ttf" id="3_t87ae"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_k65ib"]
+font = ExtResource("3_t87ae")
+font_size = 40
+
+[node name="Users" type="TextureRect"]
+texture = ExtResource("1_sd1vc")
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_direction = 3
+layout_mode = 0
+offset_left = 28.077
+offset_top = 22.0
+offset_right = 161.077
+offset_bottom = 142.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_byyyn")
+patch_margin_left = 12
+patch_margin_top = 14
+patch_margin_right = 9
+patch_margin_bottom = 11
+axis_stretch_horizontal = 1
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+text = "สวัสดี"
+label_settings = SubResource("LabelSettings_k65ib")
+horizontal_alignment = 2
+metadata/_edit_lock_ = true
