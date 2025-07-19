@@ -59,10 +59,10 @@ size_flags_vertical = 3
 theme_override_constants/separation = 0
 
 [node name="chatlist_template" parent="Chat_Screen/Chat/chatlist/VBoxContainer" instance=ExtResource("5_4j5ol")]
-visible = false
 layout_mode = 2
 
 [node name="chat detail" type="ScrollContainer" parent="Chat_Screen/Chat"]
+visible = false
 offset_left = -434.0
 offset_top = -435.0
 offset_right = 435.0
