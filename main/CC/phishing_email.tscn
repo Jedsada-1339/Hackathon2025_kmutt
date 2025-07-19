@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://ena1gcjih8dh"]
+
+[ext_resource type="Texture2D" uid="uid://btv0csr3mk1en" path="res://Dove/img/Desktop.png" id="1_qd7ln"]
+[ext_resource type="Texture2D" uid="uid://dfk0tqqx4o4q" path="res://CC/asset/Windows.png" id="2_qd7ln"]
+
+[node name="phishing_email" type="Node2D"]
+
+[node name="Desktop" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_qd7ln")
+metadata/_edit_lock_ = true
+
+[node name="email_window" type="NinePatchRect" parent="Desktop"]
+offset_left = -660.0
+offset_top = -823.0
+offset_right = 1306.0
+offset_bottom = 762.0
+texture = ExtResource("2_qd7ln")
+patch_margin_left = 408
+patch_margin_top = 576
+patch_margin_right = 629
+patch_margin_bottom = 410
