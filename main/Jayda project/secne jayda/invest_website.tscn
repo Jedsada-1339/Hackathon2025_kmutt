@@ -1,0 +1,100 @@
+[gd_scene load_steps=26 format=3 uid="uid://bdlfyo11s5gwg"]
+
+[ext_resource type="Script" uid="uid://cp166324oirgj" path="res://Jayda project/script jayda/invest_website.gd" id="1_imcje"]
+[ext_resource type="Texture2D" uid="uid://bq7tf0jop6lcq" path="res://Jayda project/img jayda/Crypto888_web.png" id="2_ohhnu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f82ei"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hhxxp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jjxf6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_018mk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0kxx5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8cmyv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rotip"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ikyhi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y18qu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pgkjy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i7xny"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_imcje"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ohhnu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cjb3h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xp5v3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p6pt5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g21bu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hw8mn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8tpgc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3i2am"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oig8d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i2nwm"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_imcje"]
+load_path = "res://.godot/imported/warning pop-up.png-c4b3afad1daf7757876b13bae8e5657a.ctex"
+
+[node name="InvestWebsite" type="Node2D"]
+script = ExtResource("1_imcje")
+
+[node name="Crypto888Web" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_ohhnu")
+
+[node name="Button" type="Button" parent="Crypto888Web"]
+offset_left = -254.0
+offset_top = 338.0
+offset_right = 250.0
+offset_bottom = 482.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f82ei")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hhxxp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jjxf6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_018mk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_0kxx5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_8cmyv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rotip")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ikyhi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_y18qu")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_pgkjy")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_i7xny")
+
+[node name="Button2" type="Button" parent="Crypto888Web"]
+offset_left = 899.0
+offset_top = -516.0
+offset_right = 929.0
+offset_bottom = -478.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_imcje")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ohhnu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cjb3h")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_xp5v3")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_p6pt5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g21bu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hw8mn")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8tpgc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3i2am")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_oig8d")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_i2nwm")
+
+[node name="WarningPop-up" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+texture = SubResource("CompressedTexture2D_imcje")
+
+[connection signal="pressed" from="Crypto888Web/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Crypto888Web/Button2" to="." method="_on_button_x_pressed"]
