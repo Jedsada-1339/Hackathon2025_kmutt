@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnto14lf8j17c"]
+
+[ext_resource type="Texture2D" uid="uid://btv0csr3mk1en" path="res://img/Desktop.png" id="1_itxqv"]
+[ext_resource type="Texture2D" uid="uid://cgq7hogl35p7w" path="res://img/Arrow.png" id="2_v0l8b"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Desktop" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_itxqv")
+
+[node name="ChatIcon" type="Node2D" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ChatIcon"]
+offset_left = 113.0
+offset_top = 97.0
+offset_right = 1167.0
+offset_bottom = 228.0
+
+[node name="TextureButton" type="TextureButton" parent="ChatIcon/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_v0l8b")
