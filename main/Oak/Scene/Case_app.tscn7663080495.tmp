@@ -1,0 +1,88 @@
+[gd_scene load_steps=9 format=3 uid="uid://bexnw1003iloi"]
+
+[ext_resource type="Script" uid="uid://bj0mvgqc5ub44" path="res://Oak/Scene/case_windows.gd" id="1_imaff"]
+[ext_resource type="Texture2D" uid="uid://ccgjnsb7psb3t" path="res://Oak/assets/Windows.png" id="1_mbi8x"]
+[ext_resource type="PackedScene" uid="uid://bu1b5nv8dwveg" path="res://Oak/Scene/case_list.tscn" id="3_qv46p"]
+[ext_resource type="Texture2D" uid="uid://cmxmcrj47e886" path="res://Oak/assets/user_chat.png" id="4_hplhb"]
+[ext_resource type="FontFile" uid="uid://b7if6iny5c6gk" path="res://Dove/fronts/NotoSansThai-VariableFont_wdth,wght.ttf" id="5_wdyn7"]
+[ext_resource type="Texture2D" uid="uid://bksm8fyfgflib" path="res://Oak/assets/person-circle-svgrepo-com (1).png" id="6_qv46p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wdyn7"]
+
+[sub_resource type="Theme" id="Theme_qv46p"]
+VScrollBar/styles/grabber_pressed = null
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_wdyn7")
+
+[node name="CasePrograme" type="Node2D"]
+
+[node name="Case_windows" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1353.0
+offset_bottom = 942.0
+script = ExtResource("1_imaff")
+
+[node name="windows" type="NinePatchRect" parent="Case_windows"]
+offset_right = 2740.0
+offset_bottom = 1551.0
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_mbi8x")
+region_rect = Rect2(0, 0, 1278, 1104)
+patch_margin_left = 208
+patch_margin_top = 328
+patch_margin_right = 318
+patch_margin_bottom = 224
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Case_windows"]
+offset_left = 146.0
+offset_top = 223.0
+offset_right = 569.0
+offset_bottom = 853.0
+theme = SubResource("Theme_qv46p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Case_windows/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 105
+
+[node name="case_list" parent="Case_windows/ScrollContainer/VBoxContainer" instance=ExtResource("3_qv46p")]
+layout_mode = 2
+
+[node name="Box_detail" type="NinePatchRect" parent="Case_windows"]
+offset_left = 569.0
+offset_top = 232.0
+offset_right = 2201.0
+offset_bottom = 1187.0
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("4_hplhb")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="detail" type="Label" parent="Case_windows/Box_detail"]
+layout_mode = 0
+offset_left = 1002.0
+offset_top = 72.3077
+offset_right = 1382.0
+offset_bottom = 150.308
+theme_override_fonts/font = ExtResource("5_wdyn7")
+theme_override_font_sizes/font_size = 51
+text = "ชื่อ"
+horizontal_alignment = 2
+autowrap_mode = 1
+
+[node name="detail2" type="Label" parent="Case_windows/Box_detail"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 217.0
+offset_right = 1600.0
+offset_bottom = 923.0
+theme_override_fonts/font = ExtResource("5_wdyn7")
+theme_override_font_sizes/font_size = 51
+text = "asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd"
+autowrap_mode = 1
+
+[node name="Person-circle-svgrepo-com(1)" type="Sprite2D" parent="Case_windows/Box_detail"]
+position = Vector2(1492.31, 109.231)
+scale = Vector2(0.720056, 0.720056)
+texture = ExtResource("6_qv46p")
